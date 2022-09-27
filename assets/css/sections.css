@@ -1,0 +1,38 @@
+.highlights-container {
+
+}
+
+.highlights-content {
+      display: flex;
+}
+
+.releases-container {
+
+}
+
+.releases-content {
+
+}
+
+.platforms-container {
+      margin-top: 30px;
+}
+
+.platforms-content {
+      width: 100%;
+      background: red;
+      display:flex;
+      justify-content: space-between;
+}
+
+.publishers-container {
+      margin-top: 30px;
+
+}
+
+.publishers-content {
+      width: 100%;
+      background: red;
+      display:flex;
+      justify-content: space-between;
+}
