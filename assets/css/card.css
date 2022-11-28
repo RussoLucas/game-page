@@ -1,9 +1,0 @@
-.card {
-  width: 30%;
-  justify-content: center;
-  background: blue;
-}
-
-.card > h2 {
-  text-align: center;
-}
