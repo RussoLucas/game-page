@@ -1,17 +1,61 @@
 .highlights-container {
-
+      background-color: #332b5f;
+      width: 100%;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
 }
+
+.section-title {
+      text-align: center;
+}
+
 
 .highlights-content {
       display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 30px;
+      padding-right: 30px;
+}
+
+.highlights-container-details {
+      background-color: #332b5f;
+      width: 100%;
+      height: 100%;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+}
+
+.highlight-text {
+      padding: 20px;
+      width: 50%;
+}
+.highlight-image {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      height: 100%;
 }
 
 .releases-container {
 
 }
 
-.releases-content {
+.releases-header {
+      display: flex;
+      justify-content: space-between;
+}
 
+.releases-content {
+      margin-top: 30px;     
+      display: grid;     
+      gap: 20px;     
+      grid-template-columns: repeat(4, 1fr);     
+}
+
+.releases-content > button {
+      left: 0;    
 }
 
 .platforms-container {
@@ -19,10 +63,10 @@
 }
 
 .platforms-content {
-      width: 100%;
-      background: red;
-      display:flex;
-      justify-content: space-between;
+      margin-top: 30px;     
+      display: grid;     
+      gap: 20px;     
+      grid-template-columns: repeat(3, 1fr); 
 }
 
 .publishers-container {
@@ -31,8 +75,8 @@
 }
 
 .publishers-content {
-      width: 100%;
-      background: red;
-      display:flex;
-      justify-content: space-between;
+      margin-top: 30px;
+      display: grid;     
+      gap: 20px;     
+      grid-template-columns: repeat(3, 1fr); 
 }

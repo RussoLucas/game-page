@@ -4,7 +4,7 @@ header {
    display: flex;
    align-items: center;
    justify-content: space-around;
-   background-color: #313640;
+   background-color: #251F47;
  }
  
 .navigator-container {
@@ -24,6 +24,10 @@ header {
 
 .navigator-list > li {
    margin-left: 40px;
+}
+
+.navigator-list > li > a {
+   text-decoration: none;
 }
 
 .search-field {

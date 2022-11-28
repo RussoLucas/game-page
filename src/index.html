@@ -8,8 +8,13 @@
    <link rel="stylesheet" href="app.css" />
    <link rel="stylesheet" href="../assets/css/sections.css" />
    <link rel="stylesheet" href="../assets/css/header.css" />
+   <link rel="stylesheet" href="../assets/css/pre-footer.css" />
+   <link rel="stylesheet" href="../assets/css/releases-card.css" />
    <link rel="stylesheet" href="../assets/css/footer.css" />
    <link rel="stylesheet" href="../assets/css/card.css" />
+
+   <script src="../scripts/index.js"></script>
+
 
    <link rel="preconnect" href="https://fonts.googleapis.com" />
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,13 +33,16 @@
          <nav class="navigator">
             <ul class="navigator-list">
                <li>
-                  <a>Posts</a>
+                  <a href="#highlights">Highlights</a>
                </li>
                <li>
-                  <a>Videos</a>
+                  <a href="#releases">Releases</a>
                </li>
                <li>
-                  <a>Recomendations</a>
+                  <a href="#platforms">Platforms</a>
+               </li>
+               <li>
+                  <a href="#publishers">Publishers</a>
                </li>
             </ul>
          </nav>
@@ -42,92 +50,67 @@
          <button>Search</button>
       </div>
    </header>
+   <section id="container-hightlights" class="highlights-container">
+      <h1 id="highlights" class="section-title" style="height: 100%;">Highlights</h1>
+      <div id="content-highlights" class="highlights-content">
+      </div>
+   </section>
    <main>
-      <section class="highlights-container">
-         <h1 class="section-title">Highlights</h1>
-         <div class="highlights-content">
-            <div>
-               <iframe></iframe>
-            </div>
-            <div>
-               lorem ipsum dolot amet
-            </div>
-         </div>
-      </section>
       <section class="releases-container">
-         <div>
-            <h1>Releases</h1>
+         <div id="releases" class="releases-header">
+            <h1>Games</h1>
+            <div>
+               <select></select>
+               <select></select>
+            </div>
          </div>
-         <div class="releases-content"></div>
+         <div id="content-releases" class="releases-content">
+
+         </div>
+         <button>Carregar mais lançamentos</button>
       </section>
       <section class="platforms-container">
-         <h1>Platforms</h1>
-         <div class="platforms-content">
-            <div class="card">
-               <h2>Platform A</h2>
-               <div>
-                  <img></img>
-                  <div></div>
-               </div>
-            </div>
-            <div class="card">
-               <h2>Platform B</h2>
-               <div>
-                  <img></img>
-                  <div></div>
-               </div>
-            </div>
-            <div class="card">
-               <h2>Platform C</h2>
-               <div>
-                  <img></img>
-                  <div></div>
-               </div>
-            </div>
+         <h1 id="platforms">Plataformas</h1>
+         <div id="content-platforms" class="platforms-content">
+
          </div>
+         <button>Carregar mais lançamentos</button>
       </section>
       <section class="publishers-container">
-         <h1> Publishers</h1>
-         <div class="publishers-content">
-            <div class="publishers-content">
-               <div class="card">
-                  <h2>Publisher A</h2>
-                  <div>
-                     <img></img>
-                     <div></div>
-                  </div>
-               </div>
-               <div class="card">
-                  <h2>Publisher B</h2>
-                  <div>
-                     <img></img>
-                     <div></div>
-                  </div>
-               </div>
-               <div class="card">
-                  <h2>Publisher C</h2>
-                  <div>
-                     <img></img>
-                     <div></div>
-                  </div>
-               </div>
-            </div>
+         <h1 id="publishers"> Publishers</h1>
+         <div id="content-publishers" class="publishers-content">
+
          </div>
+         <button>Carregar mais lançamentos</button>
       </section>
    </main>
-   <footer>
+   <div class="pre-footer">
       <section>
-         <h2>About</h2>
+         <h2>Sobre</h2>
          <br />
          <p>
-            It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-            letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-            desktop publishing packages and web page editors
+            Meu nome é Lucas, formado no curso técnico em Informática pelo CEFET-MG e cursando Sistemas de Informação
+            pela PUC Minas. Este é um trabalho de Desenvolvimento de Interfaces Web.
          </p>
       </section>
       <section>
-         <h2>About</h2>
+         <h2>Editorial</h2>
+         <br />
+         <p><b>Redação:</b> Lucas Russo Correa Dias</p>
+         <p><b>Pesquisa:</b> Lucas Russo Correa Dias</p>
+         <p><b>Gerente Geral:</b> Lucas Russo Correa Dias</p>
+         <br />
+         <div>
+            <h3>Redes sociais</h3>
+         </div>
+      </section>
+   </div>
+   <footer class="footer">
+      <section>
+         <p>Copyright 2022 - Disciplina de Desenvolvimento de Interfaces Web - <b>ICEI PUC Minas</b></p>
+      </section>
+      <section>
+         <p>LOGO</p>
       </section>
    </footer>
 </body>
