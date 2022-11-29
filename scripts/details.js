@@ -16,6 +16,12 @@ function renderGameDetails(details){
    const highlightsElement = document.getElementById("content-highlights");
    let container = "";
 
+   const publishers = details.publishers.length ? details.publishers[0].name: 'No publisher declared'
+
+   console.log(details.publishers[0]);
+
+   console.log(details);
+
    container += `
       <div class="highlight-image">
          <img src=${details.background_image}
@@ -34,7 +40,7 @@ function renderGameDetails(details){
             <p><b>Lançamento: </b> ${details.released} </p>
          </div>
 
-         <p><b>Publisher: </b> ${details.publishers[0].name} </p>
+         <p><b>Publisher: </b> ${ publishers} </p>
 
          <br />
 

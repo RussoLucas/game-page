@@ -84,7 +84,6 @@ function renderPlatforms(platforms){
             <div></div>
          </div>
          <br />
-         <a href="/src/details.html?id=${id}">Mais detalhes...</a>
       </div>`
    });
 
