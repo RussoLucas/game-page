@@ -10,7 +10,9 @@ body {
 }
 
 main {
-  padding: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 40px;
 }
 
 img {

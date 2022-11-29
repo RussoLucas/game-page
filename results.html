@@ -30,8 +30,8 @@
          <h1>GG Game Blog</h1>
       </a>
       <div class="navigator-container">
-         <input class="search-field"></input>
-         <button>Search</button>
+         <input id="input-form" class="search-field"></input>
+         <button id="form-button">Search</button>
       </div>
    </header>
    <main>
@@ -86,5 +86,15 @@
       <p>GG Game Blog</p>
    </section>
 </footer>
+<script>
+   document.getElementById("form-button").onclick = function submit() {
+      const searchValue = document.getElementById("input-form").value;
+      searchValue.trim();
+
+      const location = `./results.html?search=${searchValue}`
+      window.location.href = location;
+   }
+</script>
+
 
 </html>
