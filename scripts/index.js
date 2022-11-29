@@ -61,7 +61,7 @@ function renderGames(games){
       container += `
       <div>
          <img src=${background_image}
-            style="width: 400px; height: 250px; border-radius: 15px;"></img>
+            style="width: 320px; height: 200px; border-radius: 15px;"></img>
             <p>${name}</p>
          <a href="details.html?id=${id}">Mais detalhes...</a>
       </div>`
@@ -80,7 +80,7 @@ function renderPlatforms(platforms){
          <h2>${name}</h2>
          <div>
             <img src=${image_background}
-               style="width: 450px; height: 300px; border-radius: 15px;"></img>
+               style="width: 100%; height: 230px; border-radius: 15px;"></img>
             <div></div>
          </div>
          <br />
@@ -100,7 +100,7 @@ function renderDevelopers(developers){
       <h2>${name}</h2>
       <div>
          <img src=${image_background}
-            style="width: 450px; height: 300px; border-radius: 15px;"></img>
+            style="width: 100%; height: 230px; border-radius: 15px;"></img>
          <div>
             <p><b>Principais jogos</b></p>
 
@@ -156,7 +156,7 @@ async function renderHighlights(highlights, index){
 }
 
 window.onload = async () => {
-   const games = await getGames(1,8);
+   const games = await getGames(4,8);
    const platforms = await getPlatforms(1,3);
    const developers = await getDevelopers(1,3);
 

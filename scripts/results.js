@@ -20,7 +20,7 @@ function renderGames(games){
       container += `
       <div>
          <img src=${background_image}
-            style="width: 400px; height: 250px; border-radius: 15px;"></img>
+            style="width: 320px; height: 200px; border-radius: 15px;"></img>
             <p>${name}</p>
          <a href="details.html?id=${id}">Mais detalhes...</a>
       </div>`

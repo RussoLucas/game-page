@@ -39,7 +39,9 @@
 }
 
 .releases-container {
-
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0, 24px;
 }
 
 .releases-header {
@@ -51,7 +53,9 @@
       margin-top: 30px;     
       display: grid;     
       gap: 20px;     
-      grid-template-columns: repeat(4, 1fr);     
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      align-items: center;     
 }
 
 .releases-content > button {
@@ -59,7 +63,10 @@
 }
 
 .platforms-container {
-      margin-top: 30px;
+      padding-top: 40px;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0, 24px;
 }
 
 .platforms-content {
@@ -70,7 +77,10 @@
 }
 
 .publishers-container {
-      margin-top: 30px;
+      padding-top: 40px;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0, 24px;
 
 }
 
