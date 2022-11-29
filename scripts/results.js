@@ -22,7 +22,7 @@ function renderGames(games){
          <img src=${background_image}
             style="width: 400px; height: 250px; border-radius: 15px;"></img>
             <p>${name}</p>
-         <a href="/details.html?id=${id}">Mais detalhes...</a>
+         <a href="details.html?id=${id}">Mais detalhes...</a>
       </div>`
    });
 
