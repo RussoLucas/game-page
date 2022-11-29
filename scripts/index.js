@@ -19,8 +19,6 @@ async function getGameById(id){
 
       if(!response.ok) throw new Error("Not a 2xx response");
 
-      console.log("results", results);
-
       return results;
    } catch (error) {
       console.error(error);
@@ -65,7 +63,7 @@ function renderGames(games){
          <img src=${background_image}
             style="width: 400px; height: 250px; border-radius: 15px;"></img>
             <p>${name}</p>
-         <a>Mais detalhes...</a>
+         <a href="/src/details.html?id=${id}">Mais detalhes...</a>
       </div>`
    });
 
@@ -82,11 +80,11 @@ function renderPlatforms(platforms){
          <h2>${name}</h2>
          <div>
             <img src=${image_background}
-               style="width: 400px; height: 300px; border-radius: 15px;"></img>
+               style="width: 450px; height: 300px; border-radius: 15px;"></img>
             <div></div>
          </div>
          <br />
-         <a>Mais detalhes...</a>
+         <a href="/src/details.html?id=${id}">Mais detalhes...</a>
       </div>`
    });
 
@@ -103,7 +101,7 @@ function renderDevelopers(developers){
       <h2>${name}</h2>
       <div>
          <img src=${image_background}
-            style="width: 400px; height: 300px; border-radius: 15px;"></img>
+            style="width: 450px; height: 300px; border-radius: 15px;"></img>
          <div>
             <p><b>Principais jogos</b></p>
 
@@ -113,7 +111,7 @@ function renderDevelopers(developers){
 
          </div>
          <br />
-         <a>Mais detalhes...</a>
+         <a href="/src/details.html?id=${id}" >Mais detalhes...</a>
       </div>
    </div>
      `
@@ -129,8 +127,6 @@ async function renderHighlights(highlights, index){
 
    const hightlight = await getGameById(highlights[index].id);
 
-   console.log(hightlight)
-
       container += `
       <div class="highlight-image">
          <img src=${hightlight.background_image}
@@ -145,15 +141,12 @@ async function renderHighlights(highlights, index){
          <br />
 
          <div style="display: flex; justify-content: space-between;">
-            <p><b>Nota Metacritic: </b> ${hightlight.metacritic} </p>
+            <p><b>Metacritic: </b> ${hightlight.metacritic} </p>
             <p><b>Lançamento: </b> ${hightlight.released} </p>
          </div>
 
-         <p><b>Plataformas: </b> aaaaa </p>
-         <p><b>Gênero: </b> aaaaa </p>
+         <p><b>Publisher: </b> ${hightlight.publishers[0].name} </p>
 
-
-         <p><b>Avaliação: </b> aaaaa </p>
          <br />
 
       </div>
