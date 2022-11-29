@@ -1,0 +1,36 @@
+header {
+   width: 100%;
+   height: 75px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   background-color: #251F47;
+ }
+ 
+.navigator-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.navigator {
+   padding-right:20px;
+}
+
+.navigator-list {
+   display: flex;
+   list-style-type: none;
+}
+
+.navigator-list > li {
+   margin-left: 40px;
+}
+
+.navigator-list > li > a {
+   text-decoration: none;
+}
+
+.search-field {
+  padding-left: 10px;
+  width: 100px;
+}

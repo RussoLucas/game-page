@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="app.css" />
+   <link rel="stylesheet" href="../assets/css/sections.css" />
+   <link rel="stylesheet" href="../assets/css/header.css" />
+   <link rel="stylesheet" href="../assets/css/pre-footer.css" />
+   <link rel="stylesheet" href="../assets/css/releases-card.css" />
+   <link rel="stylesheet" href="../assets/css/footer.css" />
+   <link rel="stylesheet" href="../assets/css/card.css" />
+
+   <script src="../scripts/index.js"></script>
+
+
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+   <title>GG Game Blog</title>
+</head>
+
+<body>
+   <header>
+      <a style="text-decoration: none;" href="/src/index.html">
+         <h1>GG Game Blog</h1>
+      </a>
+
+      <div class="navigator-container">
+         <nav class="navigator">
+            <ul class="navigator-list">
+               <li>
+                  <a href="#highlights">Highlights</a>
+               </li>
+               <li>
+                  <a href="#releases">Releases</a>
+               </li>
+               <li>
+                  <a href="#platforms">Platforms</a>
+               </li>
+               <li>
+                  <a href="#publishers">Publishers</a>
+               </li>
+            </ul>
+         </nav>
+         <form id="form">
+            <input id="input-form" type="text" name="search" class="search-field"></input>
+            <input id="form-button" type="button" value="Submit" />
+         </form>
+      </div>
+   </header>
+   <section id="container-hightlights" class="highlights-container">
+      <h1 id="highlights" class="section-title" style="height: 100%;">Highlights</h1>
+      <div id="content-highlights" class="highlights-content">
+      </div>
+   </section>
+   <main>
+      <section class="releases-container">
+         <div id="releases" class="releases-header">
+            <h1>Games</h1>
+            <div>
+               <select></select>
+               <select></select>
+            </div>
+         </div>
+         <div id="content-releases" class="releases-content">
+
+         </div>
+         <button>Carregar mais lançamentos</button>
+      </section>
+      <section class="platforms-container">
+         <h1 id="platforms">Plataformas</h1>
+         <div id="content-platforms" class="platforms-content">
+
+         </div>
+         <button>Carregar mais lançamentos</button>
+      </section>
+      <section class="publishers-container">
+         <h1 id="publishers"> Publishers</h1>
+         <div id="content-publishers" class="publishers-content">
+
+         </div>
+         <button>Carregar mais lançamentos</button>
+      </section>
+   </main>
+   <div class="pre-footer">
+      <section>
+         <h2>Sobre</h2>
+         <br />
+         <p>
+            Meu nome é Lucas, formado no curso técnico em Informática pelo CEFET-MG e cursando Sistemas de Informação
+            pela PUC Minas. Este é um trabalho de Desenvolvimento de Interfaces Web.
+            <br />
+            <b>Matrícula:</b> 00784482-
+         </p>
+      </section>
+      <section>
+         <h2>Editorial</h2>
+         <br />
+         <p><b>Redação:</b> Lucas Russo Correa Dias</p>
+         <p><b>Pesquisa:</b> Lucas Russo Correa Dias</p>
+         <p><b>Gerente Geral:</b> Lucas Russo Correa Dias</p>
+         <br />
+         <div>
+            <h3>Redes sociais</h3>
+            <a style="text-decoration: none;" href="https://www.instagram.com/__lucasrusso/" target="_blank">
+               <img style="width: 30px; height:30px"
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"></img>
+            </a>
+            <a style="text-decoration: none;" href="https://www.linkedin.com/in/lucas-russo-9a09861a2/" target="_blank">
+               <img style=" width: 30px; height:30px" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></img>
+            </a>
+         </div>
+      </section>
+   </div>
+   <footer class="footer">
+      <section>
+         <p>Copyright 2022 - Disciplina de Desenvolvimento de Interfaces Web - <b>ICEI PUC Minas</b></p>
+      </section>
+      <section>
+         <p>GG Game Blog</p>
+
+      </section>
+   </footer>
+</body>
+<script>
+   document.getElementById("form-button").onclick = function submit() {
+      const searchValue = document.getElementById("input-form").value;
+      searchValue.trim();
+
+      const location = `/src/results.html?search=${searchValue}`
+      window.location.href = location;
+   }
+</script>
+
+</html>
