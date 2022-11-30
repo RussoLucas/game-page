@@ -17,11 +17,7 @@ function renderGameDetails(details){
    let container = "";
 
    const publishers = details.publishers.length ? details.publishers[0].name: 'No publisher declared'
-   // const metacritic = details.metacritic ? 
-   // console.log(details.publishers[0]);
-
-   // console.log(details);
-
+   
    container += `
       <div class="highlight-image">
          <img src=${details.background_image}

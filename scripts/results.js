@@ -1,6 +1,9 @@
-async function searchGame(search){
+let DEFAULT_GAME_PAGE = 1;
+const DEFAULT_GAMES_PER_PAGE = 20;
+
+async function searchGame(search, page, pageSize){
    try {
-      const response =  await fetch(`https://api.rawg.io/api/games?key=c0c2fae56ef54db2a862754390fd3b60&search=${search}`);
+      const response =  await fetch(`https://api.rawg.io/api/games?key=c0c2fae56ef54db2a862754390fd3b60&search=${search}&page=${page}&page_size=${pageSize}`);
       
       const results = await response.json();
 
@@ -29,14 +32,20 @@ function renderGames(games){
    releases.insertAdjacentHTML("beforeend", container);
 }
 
+async function loadMoreGames(){
+   const urlParams = new URLSearchParams(window.location.search);
+   const param = urlParams.get("search");
+   DEFAULT_GAME_PAGE++;
+
+   const games = await searchGame(param, DEFAULT_GAME_PAGE, DEFAULT_GAMES_PER_PAGE);
+   renderGames(games);  
+}
+
 window.onload = async () => {
    const urlParams = new URLSearchParams(window.location.search);
    const param = urlParams.get("search");
 
-   const games = await searchGame(param);
-
-   console.log(games);
+   const games = await searchGame(param, DEFAULT_GAME_PAGE, DEFAULT_GAMES_PER_PAGE);
+   
    renderGames(games);  
-
-   console.log(games);
 }

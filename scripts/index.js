@@ -126,7 +126,7 @@ function renderDevelopers(developers){
    const developersElement = document.getElementById("content-publishers");
    let container = "";
 
-   developers.map(({name,  image_background, id})=> {
+   developers.map(({name,  image_background, games,id})=> {
       container += `
       <div class="card">
       <h2>${name}</h2>
@@ -135,11 +135,13 @@ function renderDevelopers(developers){
             style="width: 100%; height: 230px; border-radius: 15px;"></img>
          <div>
             <p><b>Principais jogos</b></p>
-
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-
+            <div style="padding-left: 15px">
+               <ul>
+                  <li>${games[0].name}</li>
+                  <li>${games[1].name}</li>
+                  <li>${games[2].name}</li>
+               </ul>
+            </div>
          </div>
          <br />
       </div>
