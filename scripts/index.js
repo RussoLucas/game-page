@@ -1,3 +1,11 @@
+let DEFAULT_GAME_PAGE = 4;
+const DEFAULT_GAMES_PER_PAGE = 8;
+let DEFAULT_PLATFORM_PAGE = 1;
+const DEFAULT_PLATFORMS_PER_PAGE = 3;
+let DEFAULT_PUBLISHER_PAGE = 1;
+const DEFAULT_PUBLISHERS_PER_PAGE = 3;
+
+
 async function getGames(page, pageSize){
    try {
       const response = await fetch(`https://api.rawg.io/api/games?key=c0c2fae56ef54db2a862754390fd3b60&page=${page}&page_size=${pageSize}`);
@@ -90,6 +98,30 @@ function renderPlatforms(platforms){
    platformsElement.insertAdjacentHTML("beforeend", container);
 }
 
+async function loadMoreGames(){
+   DEFAULT_GAME_PAGE++;
+
+   const games = await getGames(DEFAULT_GAME_PAGE,DEFAULT_GAMES_PER_PAGE);
+
+   renderGames(games);
+}
+
+async function loadMorePlatforms(){
+   DEFAULT_PLATFORM_PAGE++;
+
+   const platforms = await getPlatforms(DEFAULT_PLATFORM_PAGE,DEFAULT_PLATFORMS_PER_PAGE);
+
+   renderPlatforms(platforms);
+}
+
+async function loadMorePublishers(){
+   DEFAULT_PUBLISHER_PAGE++;
+
+   const publishers = await getDevelopers(DEFAULT_PUBLISHER_PAGE,DEFAULT_PUBLISHERS_PER_PAGE);
+
+   renderDevelopers(publishers);
+}
+
 function renderDevelopers(developers){
    const developersElement = document.getElementById("content-publishers");
    let container = "";
@@ -154,9 +186,9 @@ async function renderHighlights(highlights, index){
 }
 
 window.onload = async () => {
-   const games = await getGames(4,8);
-   const platforms = await getPlatforms(1,3);
-   const developers = await getDevelopers(1,3);
+   const games = await getGames(DEFAULT_GAME_PAGE,DEFAULT_GAMES_PER_PAGE);
+   const platforms = await getPlatforms(DEFAULT_PLATFORM_PAGE,DEFAULT_PLATFORMS_PER_PAGE);
+   const developers = await getDevelopers(DEFAULT_PUBLISHER_PAGE,DEFAULT_PUBLISHERS_PER_PAGE);
 
    renderGames(games);
    renderPlatforms(platforms);

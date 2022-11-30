@@ -70,21 +70,21 @@
          <div id="content-releases" class="releases-content">
 
          </div>
-         <button class="button-load">Load more</button>
+         <button class="button-load" onclick="loadMoreGames()">Load more</button>
       </section>
       <section class="platforms-container">
          <h1 id="platforms">Platforms</h1>
          <div id="content-platforms" class="platforms-content">
 
          </div>
-         <button class="button-load">Load more</button>
+         <button class="button-load" onclick="loadMorePlatforms()">Load more</button>
       </section>
       <section class="publishers-container">
          <h1 id="publishers"> Publishers</h1>
          <div id="content-publishers" class="publishers-content">
 
          </div>
-         <button class="button-load">Load more</button>
+         <button class="button-load" onclick="loadMorePublishers()">Load more</button>
       </section>
    </main>
    <div class="pre-footer">
@@ -135,6 +135,7 @@
       const location = `./results.html?search=${searchValue}`
       window.location.href = location;
    }
+
 </script>
 
 </html>
