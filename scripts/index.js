@@ -60,10 +60,10 @@ function renderGames(games){
    games.map(({name,  background_image, id, metacritic})=> {
       container += `
       <div>
+         <p>${name}</p>
          <img src=${background_image}
-            style="width: 320px; height: 200px; border-radius: 15px;"></img>
-            <p>${name}</p>
-         <a href="details.html?id=${id}">Mais detalhes...</a>
+            style="width: 100%; max-width: 100%; height: 200px; border-radius: 15px;"></img>    
+         <a href="details.html?id=${id}">Details...</a>
       </div>`
    });
 
@@ -110,7 +110,6 @@ function renderDevelopers(developers){
 
          </div>
          <br />
-         <a href="details.html?id=${id}" >Mais detalhes...</a>
       </div>
    </div>
      `
@@ -147,7 +146,6 @@ async function renderHighlights(highlights, index){
          <p><b>Publisher: </b> ${hightlight.publishers[0].name} </p>
 
          <br />
-
       </div>
       `
 

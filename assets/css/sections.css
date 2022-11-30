@@ -9,6 +9,17 @@
       text-align: center;
 }
 
+.button-load {
+      background-color: #251f47;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      font-size: medium;
+      float: right;
+}
+
 
 .highlights-content {
       display: flex;

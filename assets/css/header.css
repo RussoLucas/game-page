@@ -6,6 +6,13 @@ header {
    justify-content: space-around;
    background-color: #251F47;
  }
+
+#form{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
  
 .navigator-container {
    display: flex;
@@ -15,6 +22,20 @@ header {
 
 .navigator {
    padding-right:20px;
+}
+
+.button-search{
+   margin-left: 10px;
+   width: 35px;
+   height: 35px;
+   background-color: #ffff;
+   border:none;
+   outline: 0;
+   cursor: pointer;
+   border-radius: 20px;
+   align-items: center;
+   justify-content: center;
+   display: flex;
 }
 
 .navigator-list {
@@ -31,6 +52,12 @@ header {
 }
 
 .search-field {
-  padding-left: 10px;
-  width: 100px;
+   background-color: #ffff;
+   color: #251F47;
+   border:none;
+   outline: 0;
+   padding: 5px 15px 5px 15px;
+   border-radius: 20px;
+   width: 150px;
+   font-size: medium;
 }
