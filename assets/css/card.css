@@ -3,3 +3,8 @@
    padding: 20px;
    border-radius: 10px;
 }
+
+.card-results {
+   display: flex;
+   flex-direction: column;
+}

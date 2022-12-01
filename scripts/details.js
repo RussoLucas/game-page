@@ -20,7 +20,7 @@ function renderGameDetails(details){
    
    container += `
       <div class="highlight-image">
-         <img src=${details.background_image}
+         <img src=${details.background_image|| "../assets/images/default-image.png"}
             style="height: 100%; max-width:80%; border-radius: 10px"></img>
       </div>
       <div class="highlight-text">

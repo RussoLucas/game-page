@@ -21,9 +21,9 @@ function renderGames(games){
 
    games.map(({name,  background_image, id, metacritic})=> {
       container += `
-      <div>
+      <div class="card-results">
          <p>${name}</p>
-         <img src=${background_image}
+         <img src=${background_image || "../assets/images/default-image.png"}
             style="width: 320px; height: 200px; border-radius: 15px;"></img>
          <a href="details.html?id=${id}">Details...</a>
       </div>`
